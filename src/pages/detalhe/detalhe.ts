@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { Inventario } from './../../services/inventario';
+
 /**
  * Generated class for the Detalhe page.
  *
@@ -14,11 +16,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetalhePage {
 
+  item: Inventario
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.item = navParams.get("item");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Detalhe');
+  }
+
+  onEditar() {
+
+  }
+
+  onEliminar() {
+    
   }
 
 }

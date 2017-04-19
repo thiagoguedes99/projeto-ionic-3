@@ -15,4 +15,56 @@
 
 <ion-content padding>
 
+  <ion-card>
+    
+    <ion-card-content>
+      <img src="item?.foto?" alt="">
+      <ion-title>
+        {{item.produto}}
+      </ion-title>
+      <p>Preço: {{item.preco}}</p>
+      <p>Existencia: {{item.existencia}}</p>
+      <p>Provedor: {{item.provedor}}</p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="primary" (click)="onEditar()">
+          Editar
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear small color="danger" (click)="onEliminar()" icon-left>
+          <ion-icon name="trash"></ion-icon>
+          Eliminar
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <!-- ion-card>
+      <img src="item?.foto?" alt="">
+    <ion-card-content>
+      <ion-card-title>
+        {{item.produto}}
+      </ion-card-title>
+      <p>Preço: {{item.preco}}</p>
+      <p>Existencia: {{item.existencia}}</p>
+      <p>Provedor: {{item.provedor}}</p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="primary" (click)="onEditar()">
+          Editar
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear small color="danger" (click)="onEliminar()">
+          Eliminar
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card -->
+
 </ion-content>
