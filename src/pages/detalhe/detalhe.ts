@@ -2,27 +2,23 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the Inventario page.
+ * Generated class for the Detalhe page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-inventario',
-  templateUrl: 'inventario.html',
+  selector: 'page-detalhe',
+  templateUrl: 'detalhe.html',
 })
-export class InventarioPage {
+export class DetalhePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Inventario');
-  }
-
-  goDetalhePage() {
-    this.navCtrl.push("DetalhePage");
+    console.log('ionViewDidLoad Detalhe');
   }
 
 }
