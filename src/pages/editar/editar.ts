@@ -1,21 +1,20 @@
+import { Inventario } from './../../services/inventario';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Inventario } from './../../services/inventario';
-
 /**
- * Generated class for the Detalhe page.
+ * Generated class for the Editar page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-detalhe',
-  templateUrl: 'detalhe.html',
+  selector: 'page-editar',
+  templateUrl: 'editar.html',
 })
-export class DetalhePage {
-
+export class EditarPage {
+  
   item: Inventario;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -23,15 +22,7 @@ export class DetalhePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Detalhe');
-  }
-
-  onEditar() {
-    this.navCtrl.push("EditarPage", {"item": this.item});
-  }
-
-  onEliminar() {
-
+    console.log('ionViewDidLoad Editar');
   }
 
 }

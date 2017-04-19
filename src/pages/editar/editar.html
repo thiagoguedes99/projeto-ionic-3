@@ -1,5 +1,5 @@
 <!--
-  Generated template for the Detalhe page.
+  Generated template for the Editar page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>detalhe</ion-title>
+    <ion-title>editar</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,12 +19,26 @@
     
     <ion-card-content>
       <img src="item?.foto?" alt="">
-      <ion-title>
-        {{item.produto}}
-      </ion-title>
-      <p>Preço: {{item.preco}}</p>
-      <p>Existencia: {{item.existencia}}</p>
-      <p>Provedor: {{item.provedor}}</p>
+
+      <ion-item>
+        <ion-label floating>Produto</ion-label>
+        <ion-input [(ngModel)]="item.produto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Preço:</ion-label>
+        <ion-input [(ngModel)]="item.preco"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Existencia:</ion-label>
+        <ion-input [(ngModel)]="item.existencia"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Provedor:</ion-label>
+        <ion-input [(ngModel)]="item.provedor"></ion-input>
+      </ion-item>
     </ion-card-content>
 
     <ion-row no-padding>

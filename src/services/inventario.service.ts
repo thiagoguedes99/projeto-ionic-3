@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
+//import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 //import { Inventario } from './../model/inventario';
 import { Resposta } from './../model/resposta';
