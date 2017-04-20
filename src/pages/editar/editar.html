@@ -43,18 +43,19 @@
 
     <ion-row no-padding>
       <ion-col>
-        <button ion-button clear small color="primary" (click)="onEditar()">
-          Editar
+        <button ion-button (click)="onSalvar()">
+          Salvar
         </button>
       </ion-col>
       <ion-col>
-        <button ion-button clear small color="danger" (click)="onEliminar()" icon-left>
+        <button ion-button color="danger" (click)="onCancelar()" icon-left>
           <ion-icon name="trash"></ion-icon>
-          Eliminar
+          Cancelar
         </button>
       </ion-col>
     </ion-row>
 
   </ion-card>
+  <p>{{res?.res}}</p>
 
 </ion-content>
