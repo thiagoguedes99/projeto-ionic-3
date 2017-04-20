@@ -33,14 +33,23 @@
           Editar
         </button>
       </ion-col>
+
       <ion-col>
         <button ion-button clear small color="danger" (click)="onEliminar()" icon-left>
           <ion-icon name="trash"></ion-icon>
           Eliminar
         </button>
       </ion-col>
+
+      <ion-col>
+        <button ion-button icon-only (click)="onCancelar()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </ion-col>
     </ion-row>
 
   </ion-card>
+
+  <p>{{res?.res}}</p>
 
 </ion-content>

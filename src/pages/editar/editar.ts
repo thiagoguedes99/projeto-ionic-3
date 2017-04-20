@@ -34,7 +34,7 @@ export class EditarPage {
                 .subscribe(
                   resp => this.res = resp,
                   err => this.res = err,
-                  () => console.log('finalizado atualização')
+                  () => this.navCtrl.popToRoot()
                 );
   }
 
