@@ -1,17 +1,78 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Adicionar produto
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-card-content>
+
+    <form [formGroup]="form" (ngSubmit)="adicionarInventario()" novalidate>
+      
+      <ion-list>
+
+        <ion-item>
+          <ion-label color="primary" floating>ID</ion-label>
+          <ion-input formControlName="id"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="form.get('id').errors && form.get('id').touched" >
+          <p *ngIf="form.get('id').hasError('required')">campo obrigatório</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" floating>Produto</ion-label>
+          <ion-input formControlName="produto"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="form.get('produto').errors && form.get('produto').touched" >
+          <p *ngIf="form.get('produto').hasError('required')">campo obrigatório</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" floating>Existencia</ion-label>
+          <ion-input formControlName="existencia"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="form.get('existencia').errors && form.get('existencia').touched" >
+          <p *ngIf="form.get('existencia').hasError('required')">campo obrigatório</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" floating>Preco</ion-label>
+          <ion-input formControlName="preco"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="form.get('preco').errors && form.get('preco').touched" >
+          <p *ngIf="form.get('preco').hasError('required')">campo obrigatório</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" floating>Provedor</ion-label>
+          <ion-input formControlName="provedor"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="form.get('provedor').errors && form.get('provedor').touched" >
+          <p *ngIf="form.get('provedor').hasError('required')">campo obrigatório</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" floating>Foto</ion-label>
+          <ion-input formControlName="foto"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="form.get('foto').errors && form.get('foto').touched" >
+          <p *ngIf="form.get('foto').hasError('required')">campo obrigatório</p>
+        </ion-item>
+
+      </ion-list>
+      <button type="submit" ion-button block [disabled]="form.invalid">Salvar</button>    
+    </form>
+  </ion-card-content>
+
+
+
+  <!-- ion-list>
     <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
       <ion-icon name="ionic" item-left></ion-icon>
       @ionicframework
     </ion-item>
-  </ion-list>
+  </ion-list -->
 </ion-content>

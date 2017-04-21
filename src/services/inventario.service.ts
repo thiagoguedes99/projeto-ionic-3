@@ -4,8 +4,9 @@ import { Observable } from 'rxjs/Rx';
 //import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 //import { Inventario } from './../model/inventario';
-import { Resposta } from './../model/resposta';
+//import { Resposta } from './../model/resposta';
 import { Inventario } from './inventario';
+import { Resposta } from "./resposta";
 
 @Injectable()
 export class InventarioService {
@@ -28,7 +29,7 @@ export class InventarioService {
                .catch(this.handleError);
   }
 
-  gravar(inventario: any) { //: Observable<Resposta> {
+  gravar(inventario: any): Observable<Resposta> {
     return this.http.post(this.url, inventario)
                     .map(r=> r.json())
                     .catch(err=> err);
