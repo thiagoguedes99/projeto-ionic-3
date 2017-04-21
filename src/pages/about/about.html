@@ -1,26 +1,32 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            About
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-fab botton right>
-    <button ion-fab>
-      <ion-icon name="arrow-dropleft"></ion-icon>
-    </button>
-    <ion-fab-list side="left">
-      <button ion-fab>
-        <ion-icon name="logo-facebook"></ion-icon> 
-      </button>
+    <ion-fab bottom right>
+        <button ion-fab>
+            <ion-icon name="arrow-dropleft"></ion-icon>
+        </button>
 
-      <button ion-fab>
-        <ion-icon name="logo-facebook"></ion-icon> 
-      </button>
-    </ion-fab-list>
-  </ion-fab>
+        <ion-fab-list side="top">
+            <button ion-fab>
+                <ion-icon name="logo-facebook"></ion-icon> 
+            </button>
+
+            <!-- Atenção!!! deve instalar primeiro esse plugin = ionic plugin add cordova-plugin-inappbrowser -->
+            <button ion-fab onclick="window.open('https://github.com/thiagoguedes99', 'system', 'location=yes')">
+                <ion-icon name="logo-github"></ion-icon> 
+            </button>
+
+            <button ion-fab>
+                <ion-icon name="logo-linkedin"></ion-icon> 
+            </button>
+        </ion-fab-list>
+    </ion-fab>
 
 </ion-content>
