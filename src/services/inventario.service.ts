@@ -11,40 +11,42 @@ import { Resposta } from "./resposta";
 @Injectable()
 export class InventarioService {
 
-  private header = new Headers({'Content-Type': 'application/json'});
-  private url = 'http://localhost:3000/inventario/';
+  private header = new Headers({ 'Content-Type': 'application/json' });
+  //private url = 'http://localhost:3000/inventario/';
+  private url = 'http://192.168.0.3:8080/inventario/';
+
 
   constructor(private http: Http) { }
 
   getInventario(): Observable<Inventario[]> {
 
     return this.http.get(this.url)
-                    .map(r => r.json())
-                    .catch(this.handleError);
+      .map(r => r.json())
+      .catch(this.handleError);
   }
 
   getPeloID(id: number): Observable<Inventario> {
     return this.http.get(`${this.url}:id`, id)
-               .map(r => r.json())
-               .catch(this.handleError);
+      .map(r => r.json())
+      .catch(this.handleError);
   }
 
   gravar(inventario: any): Observable<Resposta> {
     return this.http.post(this.url, inventario)
-                    .map(r=> r.json())
-                    .catch(err=> err);
+      .map(r => r.json())
+      .catch(err => err);
   }
 
   atualizar(inventario: Inventario) { //: Observable<Resposta> {
     return this.http.put(this.url, inventario)
-                    .map(r => r.json())
-                    .catch(this.handleError);
+      .map(r => r.json())
+      .catch(this.handleError);
   }
 
   deletar(id: number) { //: Observable<Resposta> {
-    return this.http.delete(`${this.url}:id`,id)
-                    .map(r => r.json())
-                    .catch(this.handleError);
+    return this.http.delete(`${this.url}:id`, id)
+      .map(r => r.json())
+      .catch(this.handleError);
   }
 
 
@@ -52,13 +54,13 @@ export class InventarioService {
   private handleError(error: Response | any) {
     let errMsg: string;
 
-    if(error instanceof Response){
+    if (error instanceof Response) {
       let body = error.json() || '';
       let err = body.error || JSON.stringify(body);
 
       errMsg = `${error.status} - ${error.statusText || ''} - ${err}`;
     }
-    else{
+    else {
       errMsg = error.message ? error.message : error.toString();
     }
     return Observable.throw(errMsg);

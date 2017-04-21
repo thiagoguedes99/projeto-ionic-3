@@ -34,7 +34,7 @@ export class ContactPage {
     this.service.gravar(this.form.value)
                 .subscribe(
                   rs => this.mostrarAlerta('resultado', rs.res),
-                  err => this.res = err,
+                  err => this.mostrarAlerta('resultado', err),
                   () => console.log(this.res)
                 );
   }
